@@ -1,0 +1,64 @@
+/* постійні клієнти */
+
+.section-customer-reviews
+{
+  height: 400px;
+margin: 0 auto;
+background: url(../images/bg/bg-products-mob.png), var(--card-color-1);
+background-repeat: repeat-y;
+background-position: -101px 0; 
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+
+    .section-customer-reviews
+    { 
+        background: url(../images/bg/bg-products-mob@2x.png);
+    }
+}
+
+.customer-container
+{
+  margin: 0;
+
+}
+
+
+.customer-reviewse
+{
+margin: 0 auto;
+  width: 280px;
+background-color: var(--prime-color);
+padding: 35px 39px;
+border-radius: 10px;
+background-color: var(--prime-color);
+
+}
+
+.customer-reviewse__text
+{
+  font-family: var(--font-first);
+font-size: 12px;
+line-height: 2.6;
+text-align: center;
+color: var(--burger-color);
+}
+
+.auther-reviews
+{
+
+  font-family: var(--font-first);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.9;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.customer-image
+{
+  margin-bottom: 32px;
+  width: 85px;
+}

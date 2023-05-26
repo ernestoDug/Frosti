@@ -1,0 +1,298 @@
+
+.section-hero {
+   margin: 0 auto;
+   height: 450px;
+   padding-top: 50px;
+  background-color: var(--prime-color);
+  position: relative;
+}
+
+.hero-thumb,
+.hero-thumb-points
+{
+  position: absolute;
+  bottom: 0;
+left: 83px;
+}
+
+.hero-thumb
+{
+
+animation-name: puffIn;
+animation-duration: 5s;
+animation-fill-mode: none;
+animation-direction: alternate;
+}
+
+.hero-thumb-points
+{
+  left: 0;
+  
+animation-name: puffIn;
+animation-duration: 7s;
+animation-fill-mode: none;
+animation-direction: normal;
+}
+
+.hero__title {
+     font-size:  26px;
+    line-height: 1.2;
+    color: var(--hero-title-color);
+    font-family: var(--font-sacond);
+    text-transform: uppercase;
+  }
+.hero-title-last-word
+{
+  font-size: 34px;
+  line-height: 0.9;
+
+}
+// *
+  .hero-button-wrapp
+  {
+    display: flex;
+    margin-top: 32px;
+    gap: 12px;
+    align-items: baseline;
+  }
+
+  // button
+ 
+  .hero__button
+  {
+   padding: 0;
+ 
+  height: 38px;
+border-radius: 8px;
+font-weight: 600;
+font-size: 12px;
+line-height: 1.3;
+background-color: transparent;
+border-color: transparent;
+  }
+
+  // *
+  .hero__button--first
+  {
+    margin: 0;
+    padding-left: 26px;
+    padding-right: 26px;
+    border: 2px solid var(--button-color);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hero-button__link:not(.hero-button__link--color)
+  {
+    text-decoration: none;
+  }
+  // *
+  .hero__button--first:hover
+  {
+    border: 2px solid var(--button-border-hover-color);
+  }
+
+   .hero-button__link--color
+        {
+                    display: inline-block;
+          color: var(--button-color);
+          font-size: 12px;
+          line-height: 1.2;
+          font-weight: 600;
+          transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+       
+
+          &:focus
+          {
+            color: var(--hero-title-color);
+          }
+          
+          &:hover
+          {
+            color: var(--button-border-hover-color);
+          }
+          &:disabled
+          {
+           color: var(--button-color-hero-disable);
+          }
+        }
+
+// *
+
+
+
+
+
+
+
+// @media (min-device-pixel-ratio: 2),
+//   (min-resolution: 192dpi),
+//   (min-resolution: 2dppx) {
+//   .section-ofer {
+//     background-image: linear-gradient(
+//         to right,
+//         var(--ofer-color),
+//         var(--ofer-color-finish-gradient)
+//       ),
+//       url("../images/bg-image-mob320@2x.jpg");
+//   }
+// }
+
+/* кнопка */
+.button {
+  @include flex-center-center();
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: var(--active-text-color);
+  color: var(--header-color);
+  cursor: pointer;
+  border: none;
+  @include for-fonts(16px, 700, 1.9);
+  padding: 10px 24px;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* ховери] */
+  &:hover,
+  &:focus {
+    background-color: var(--color-hover);
+    color: var(--header-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// 320**************************479
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .section-ofer__title {
+    width: 290px;
+    margin-bottom: 30px;
+    @include for-fonts(20px, 900, 1.6);
+  }
+  .section-ofer {
+    max-width: 479px;
+    padding-bottom: 118px;
+    padding-top: 118px;
+    margin: 0 auto;
+  }
+} // @media screen and (max-width: 479px)
+
+// ********************************************
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .section-ofer__title {
+    @include for-fonts(26px, 900, 1.6);
+
+    letter-spacing: 0.06em;
+  }
+  .section-ofer {
+    background-color: var(--ofer-bg-color);
+    background-image: linear-gradient(
+        to right,
+        var(--ofer-color),
+        var(--ofer-color-finish-gradient)
+      ),
+      url("../images/bg-image-mob.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 767px;
+    padding-bottom: 118px;
+    padding-top: 118px;
+    margin: 0 auto;
+  }
+  .section-ofer__title {
+    margin-bottom: 30px;
+    width: 360px;
+  }
+} // @media screen and (min-width: 480px) and (max-width: 767px) {
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-ofer {
+    background-image: linear-gradient(
+        to right,
+        var(--ofer-color),
+        var(--ofer-color-finish-gradient)
+      ),
+      url("../images/bg-image-mob@2x.jpg");
+  }
+}
+
+// ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .section-ofer {
+    background-image: linear-gradient(
+      to right,
+      var(--ofer-color),
+      var(--ofer-color-finish-gradient)
+    ), url("../images/bg-image-tablet.jpg");
+    max-width: 1199;
+    padding-bottom: 118px;
+    padding-top: 118px;
+    margin: 0 auto;
+  }
+
+  .section-ofer__title {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 360px;
+    text-align: center;
+    font-size: 26px;
+  }
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-ofer {
+    background-image: linear-gradient(
+      to right,
+      var(--ofer-color),
+      var(--ofer-color-finish-gradient)
+    ), url("../images/bg-image-tablet@2x.jpg");
+  }
+}
+// @media screen and (min-width: 768px) and (max-width: 1199px)
+
+// ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
+@media screen and (min-width: 1200px) {
+  .section-ofer {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin: 0 auto;
+    background-image: linear-gradient(
+        to right,
+        var(--ofer-color),
+        var(--ofer-color-finish-gradient)
+      ),
+      url("../images/bg-image-desk.jpg");
+    &__title {
+      animation-name: com_sl2;
+      animation-iteration-count: infinite;
+      animation-duration: 15s;
+      animation-fill-mode: none;
+      animation-direction: alternate;
+      width: 696px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      font-size: 44px;
+      text-align: center;
+    }
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-ofer {
+      background-image: linear-gradient(
+          to right,
+          var(--ofer-color),
+          var(--ofer-color-finish-gradient)
+        ),
+        url("../images/bg-image-desk@2x.jpg");
+    }
+  }
+
+  .button {
+    width: 216px;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}

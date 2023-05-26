@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Ice cream</title>
+    <!-- favicon -->
+    <!-- ***************************************************************** -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ********************************************************************** -->
+    <!-- fonts 1-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fonts2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <!-- cusomStyleFile -->
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="header">
+      <!-- header container-->
+      <div class="container header__container">
+        <!-- логотип -->
+        <div class="card-thumb logo-thumb">
+          <picture class="logo">
+            <!-- desktop -->
+            <source
+              srcset="
+                images/logo/logo__desk.png    1x,
+                images/logo/logo__desk@2x.png 2x
+              "
+              media="(min-width: 1200px)"
+            />
+
+            <!-- tablet -->
+            <source
+              srcset="
+                images/logo/logo__tab.png    1x,
+                images/logo/logo__tab@2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+
+            <!-- mobil -->
+            <source
+              srcset="
+                images/logo/logo__mob.png    1x,
+                images/logo/logo__mob@2x.png 2x
+              "
+              media="(min-width: 480px)"
+            />
+            <!-- mobil320 -->
+            <source
+              srcset="
+                images/logo/logo__mob320.png,
+                images/logo/logo__mob320@2x.png 2x
+              "
+              media="(min-width: 320px)"
+            />
+
+            <img
+              class="logo"
+              src="images/logo/logo__mob320.png"
+              alt="yellow ice"
+            />
+          </picture>
+        </div>
+        <!-- /card-thumb  for logo -->
+
+        <!-- navigation -->
+        <nav class="header__navigation head-nav">
+          <ul class="head-nav__menu menu">
+            <li class="menu__item">
+              <a class="menu__link menu__link--active" href="#">Home</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="portfolio.html"> How it’s made?</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Our products </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Contact </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!--burger  -->
+        <button type="button" class="mobile-menu-burger" data-menu-open>
+          <svg class="mobile-menu-burger__icon" width="32" height="32">
+            <use xlink:href="sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- /"container header-container" -->
+    </header>
+
+    <main class="main">
+      <!-- **************************************************************************************** -->
+      <!-- section hero -->
+      <section class="section section-hero">
+        <div class="container hero__container">
+          <h1 class="hero__title">
+            ice cream made with
+            <span class="hero-title-last-word">passion</span>
+          </h1>
+          <div class="hero-button-wrapp">
+            <button
+              class="buton hero__button hero__button--first"
+              type="button"
+            >
+              <a class="hero-button__link" href="#">Products</a>
+            </button>
+            <a class="hero-button__link hero-button__link--color" href="#"
+              >How it’s made?</a
+            >
+          </div>
+          <!-- hero-button-wrapp"> -->
+
+          <!-- hero-image -->
+          <div class="card-thumb hero-thumb">
+            <picture class="hero-image">
+              <!-- desktop -->
+              <source
+                srcset="
+                  images/hero/hero-desk.png    1x,
+                  images/hero/hero-desk@2x.png 2x
+                "
+                media="(min-width: 1200px)"
+              />
+              <!-- tablet -->
+              <source
+                srcset="
+                  images/hero/hero-tab.png    1x,
+                  images/hero/hero-tab@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <!-- mobil 480-->
+              <source
+                srcset="
+                  images/hero/hero-mob480.png    1x,
+                  images/hero/hero-mob480@2x.png 2x
+                "
+                media="(min-width: 480px)"
+              />
+
+              <!-- mobil 320-->
+              <source
+                srcset="
+                  images/hero/hero-mob320.png    1x,
+                  images/hero/hero-mob320@2x.png 2x
+                "
+                media="(min-width: 320px)"
+              />
+
+              <img src="images/hero/hero-mob320.png," alt="ice color" />
+            </picture>
+          </div>
+          <!-- /card-thumb   for hero -->
+
+          <!-- points  -->
+          <!-- hero-image -->
+          <div class="card-thumb hero-thumb-points">
+            <picture class="hero-image-points">
+              <!-- desktop -->
+              <source
+                srcset="
+                  images/hero/hero-desk.png    1x,
+                  images/hero/hero-desk@2x.png 2x
+                "
+                media="(min-width: 1200px)"
+              />
+              <!-- tablet -->
+              <source
+                srcset="
+                  images/hero/hero-tab.png    1x,
+                  images/hero/hero-tab@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <!-- mobil 480-->
+              <source
+                srcset="
+                  images/hero/hero-mob480.png    1x,
+                  images/hero/hero-mob480@2x.png 2x
+                "
+                media="(min-width: 480px)"
+              />
+
+              <!-- mobil 320-->
+              <source
+                srcset="
+                  images/hero/hero-point-mob320.png    1x,
+                  images/hero/hero-point-mob320@2x.png 2x
+                "
+                media="(min-width: 320px)"
+              />
+
+              <img
+                src="images/hero/hero-point-mob320.png,"
+                alt="yellow points"
+              />
+            </picture>
+          </div>
+          <!-- /card-thumb   for hero points -->
+
+          <!-- aside -->
+          <!-- **************************************************************************************** -->
+          <aside class="aside">
+            <div class="aside-container">
+              <h3 class="aside-stores__title">cafes</h3>
+
+              <p class="aside-stores__count">16</p>
+            </div>
+            <!--/ aside-stores -->
+
+            <div class="aside__stores aside-stores">
+              <h3 class="aside-stores__title">food trucks</h3>
+
+              <p class="aside-stores__count">23</p>
+            </div>
+            <!-- "aside-container" -->
+          </aside>
+          <!--/ aside -->
+
+          <div class="card-thumb hero-round">
+            <picture class="hero-image hero-image-round">
+              <!-- desktop -->
+              <source
+                srcset="
+                  images/hero/hero-round-ice-desk.jpg    1x,
+                  images/hero/hero-round-ice-desk@2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+              />
+              <!-- tablet -->
+              <source
+                srcset="
+                  images/hero/hero-round-ice-tab.jpg    1x,
+                  images/hero/hero-round-ice-tab@2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+
+              <img
+                class="hero-round-img"
+                src="images/hero/hero-round-ice-tab.jpg,"
+                alt="ice cream color"
+                width="152"
+              />
+            </picture>
+            <!--/ hero-image hero-image-round"> -->
+          </div>
+          <!-- card-thumb hero-round -->
+
+          <div class="hero__describe">
+            <p class="hero__text">
+              Indulge in a scoop of ice cream made with passion and treat your
+              taste buds to an unforgettable experience!
+            </p>
+          </div>
+          <!-- /hero__describ -->
+        </div>
+        <!-- /hero-container -->
+      </section>
+      <!-- /section-hero -->
+
+      <!-- **************************************************************************************** -->
+      <!--  products-section -->
+      <section class="section products-section">
+        <div class="container products-section__container">
+          <p class="products-section__lable">100% natural</p>
+          <h2 class="products-section__title">products</h2>
+
+          <!-- card -->
+          <ul class="card">
+            <!-- 1=== -->
+            <li class="card__item card__item--first">
+              <div class="card-contentt">
+                <h2 class="card-name">ice cream</h2>
+                <p class="card-descraib">
+                  Soft ice cream with a delicate taste. Made with milk, cream,
+                  sugar and natural stabilizer
+                </p>
+              </div>
+              <!-- /  card-content" -->
+              <button type="button" class="card-batton">
+                <svg class="card-button__icon" width="40" height="16">
+                  <use xlink:href="sprite.svg#icon-arrow-cardsvg40x16"></use>
+                </svg>
+              </button>
+            </li>
+            <!-- 2 -->
+            <li class="card__item card__item--sacond">
+              <div class="card-contentt">
+                <h2 class="card-name">ice coffee</h2>
+                <p class="card-descraib">
+                  Fragrant invigorating drink created from 100% natural
+                  ingredients without the use of preservatives and flavor
+                  enhancers
+                </p>
+              </div>
+              <!-- /  card-content" -->
+              <button type="button" class="card-batton">
+                <svg class="card-button__icon" width="40" height="16">
+                  <use xlink:href="sprite.svg#icon-arrow-cardsvg40x16"></use>
+                </svg>
+              </button>
+            </li>
+
+            <!-- 3=== -->
+            <li class="card__item card__item--third">
+              <div class="card-contentt">
+                <h2 class="card-name">milkshakes</h2>
+                <p class="card-descraib">
+                  Sweet drinks based on milk and ice cream, supplemented with
+                  syrups, fruits, berries and other sweets of your choice
+                </p>
+              </div>
+              <!-- /  card-content" -->
+              <button type="button" class="card-batton">
+                <svg class="card-button__icon" width="40" height="16">
+                  <use xlink:href="sprite.svg#icon-arrow-cardsvg40x16"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <!-- card -->
+        </div>
+        <!-- container products-section__container"> -->
+      </section>
+      <!-- /products-section -->
+
+      <!-- About (how it’s made?) -->
+      <section class="section section-about">
+        <div class="container section-about__container">
+          <p class="section-about__label">tradition and love</p>
+          <h2 class="section-about__title">how it’s made?</h2>
+          <div class="about-image-wrapp">
+            <div class="card-thumb about-thumb"></div>
+          </div>
+          <!-- card-thumb about-thumb"> -->
+
+          <div class="section-about__text">
+            <p class="section-about__describe section-about__describe--top">
+              Ice is a place where you will become not only a little happier,
+              but also healthier. Health is the main value for us, and we follow
+              it when creating our handmade desserts.
+            </p>
+
+            <p class="section-about__describe section-about__describe--modle">
+              Ice is a place where you will become not only a little happier,
+              but also healthier. Health is the main value for us, and we follow
+              it when creating our handmade desserts. We use traditional recipes
+              and 100% natural ingredients. Our products are so natural that
+              they can be given to children from the age of three years. Sweets
+              lovers can expect 55 types of ice cream, 15 types of coffee and 23
+              milkshakes.
+            </p>
+
+            <p class="section-about__describe">
+              This is enough to choose ice cream and coffee for any mood!
+            </p>
+            <button type="button" class="button about-button">
+              Read more
+              <svg class="button__icon" width="12" height="12">
+                <use xlink:href="sprite.svg#icon-arrow-button12x12"></use>
+              </svg>
+            </button>
+          </div>
+          <!-- class="section-about__text"> -->
+        </div>
+        <!-- "container section-about_ -->
+      </section>
+      <!-- "section section-about"> -->
+
+      <section class="section section-advantages">
+        <div class="container container-advantages">
+          <h1 class="hidden">advantages</h1>
+          <ul class="section-advantages__list">
+            <!-- 1 -->
+            <li class="section-advantages-item advantages-item--top">
+              <h3 class="advantages-item__title advantages-item__title--top">
+                721
+              </h3>
+              <p class="advantages-item__describe">
+                Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+              </p>
+
+              <img src="#" alt="" />
+            </li>
+
+            <!-- 2 -->
+            <li class="section-advantages-item advantages-item--midle">
+              <h3 class="advantages-item__title advantages-item__title--midle">
+                16kg
+              </h3>
+              <p class="advantages-item__describe">
+                Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+              </p>
+
+              <img src="#" alt="" />
+            </li>
+
+            <!-- 3 -->
+            <li
+              class="section-advantages-item advantages-item advantages-item--last"
+            >
+              <h3 class="advantages-item__title advantages-item__title--last">
+                84
+              </h3>
+              <p
+                class="advantages-item__describe advantages-item__describe--last"
+              >
+                Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+              </p>
+
+              <img src="#" alt="" />
+            </li>
+          </ul>
+        </div>
+        <!--/container container-advantages -->
+      </section>
+      <!-- /section-advantages"> -->
+
+      <!-- gallery -->
+      <section class="section section-gallery">
+        <div class="container container-gallery">
+          <!-- ********************************************************************* -->
+          <div class="card-thumb galery-thumb">
+            <picture class="galery-picture">
+              <source
+                srcset="
+                  images/galery/galery-desk.jpg    1x,
+                  images/galery/galery-desk@2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+              />
+
+              <source
+                srcset="
+                  images/galery/galery-tab.jpg    1x,
+                  images/galery/galery-tab@2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+
+              <source
+                srcset="
+                  images/galery/galery-mob480.jpg    1x,
+                  images/galery/galery-mob480@2x.jpg 2x
+                "
+                media="(min-width: 480px)"
+              />
+
+              <img src="images/galery/galery-mob320.jpg" alt="ice on table" />
+            </picture>
+          </div>
+          <!-- card-thumb galery-thumb"> -->
+        </div>
+        <!-- container-gallery -->
+      </section>
+      <!-- /gallery -->
+
+      <section class="class=section section-customer-reviews">
+        <div class="container customer-container">
+          <div class="card-thumb customer-thumb">
+            <picture class="customer-image">
+              <!-- desktop -->
+              <source
+                srcset="
+                  images/hero/hero-round-ice-desk.jpg    1x,
+                  images/hero/hero-round-ice-desk@2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+              />
+              <!-- tablet -->
+              <source
+                srcset="
+                  images/hero/hero-round-ice-tab.jpg    1x,
+                  images/hero/hero-round-ice-tab@2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+
+              <source
+                srcset="
+                  images/galery/galery-mob480.jpg    1x,
+                  images/galery/galery-mob480@2x.jpg 2x
+                "
+                media="(min-width: 480px)"
+              />
+
+              <img
+                class="customer-img"
+                src="images/customer-reviews/customer-mob320.png"
+                alt="woman"
+                width="85px"
+              />
+            </picture>
+            <!-- customer-image -->
+
+            <div class="customer-reviewse">
+              <p class="customer-reviewse__text">
+                I love visiting your cafe. You prepare the most delicious ice
+                cream in Los Angeles! In addition, you have beautiful serving,
+                cozy atmosphere and polite staff.
+              </p>
+            </div>
+            <!-- /customer-review -->
+            <p class="auther-reviews">Emily, Los Angeles</p>
+          </div>
+          <!-- customer -thumb  -->
+        </div>
+        <!-- customer-container  -->
+      </section>
+      <!-- /section-customer-reviews -->
+
+      <section class="section section-contacts">
+        <div class="container container-contacts">
+          <h1 class="hidden">contacts</h1>
+          <!-- grid contact*/1
+          /*  стиллі списків для карток портфоліо  */ -->
+          <ul class="company__list">
+            <!-- 1 -->
+            <li class="company__item">
+              <a href="#" class="company__link"> </a>
+
+              <p class="company__title">CAFE</p>
+
+              <p class="company__city">Chicago</p>
+              <a
+                class="company-adress__link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                10340 Ridgeland Ave, Chicago Ridge, IL 60415, USA
+              </a>
+
+              <p class="company-work-day">Monday - Friday</p>
+              <p class="company-work-clock">06:00 AM - 10:00 PM</p>
+
+              <p class="company-work-day-weekend">Saturday - Sunday</p>
+
+              <p class="company-work-clock">08:00 AM - 16:00 PM</p>
+
+              <a class="company__phone-link" href="tel:+61(0)383766284">
+                +61(0) 383 766 284
+              </a>
+
+              <a class="company__mail-link" href="mailto:noreply@envato.com">
+                noreply@envato.com
+              </a>
+            </li>
+            <!-- company item -->
+
+            <!-- 2 -->
+            <li class="company__item">
+              <a href="#" class="company__link"> </a>
+
+              <p class="company__title">FOODTRUCK</p>
+
+              <p class="company__city">Los Angeles</p>
+              <a
+                class="company-adress__link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                1003 Manhattan Ave, Manhattan Beach, CA 90263, USA
+              </a>
+
+              <p class="company-work-day">Monday - Friday</p>
+              <p class="company-work-clock">06:00 AM - 10:00 PM</p>
+
+              <p class="company-work-day-weekend">Saturday - Sunday</p>
+
+              <p class="company-work-clock">08:00 AM - 16:00 PM</p>
+
+              <a class="company__phone-link" href="tel:+61(0)383766284">
+                +61(0) 383 766 284
+              </a>
+
+              <a class="company__mail-link" href="mailto:noreply@envato.com">
+                noreply@envato.com
+              </a>
+            </li>
+            <!-- company item -->
+
+            <!-- 3 -->
+            <li class="company__item">
+              <a href="#" class="company__link"> </a>
+
+              <p class="company__title">CAFE</p>
+
+              <p class="company__city">New York</p>
+              <a
+                class="company-adress__link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                726 Sterling Pl, Brooklyn, NY 11222, USA
+              </a>
+
+              <p class="company-work-day">Monday - Friday</p>
+              <p class="company-work-clock">06:00 AM - 10:00 PM</p>
+
+              <p class="company-work-day-weekend">Saturday - Sunday</p>
+
+              <p class="company-work-clock">08:00 AM - 16:00 PM</p>
+
+              <a class="company__phone-link" href="tel:+61(0)383766284">
+                +61(0) 383 766 284
+              </a>
+
+              <a class="company__mail-link" href="mailto:noreply@envato.com">
+                noreply@envato.com
+              </a>
+            </li>
+            <!-- company item -->
+          </ul>
+          <!-- company-rider__list" -->
+          <button type="button" class="button product-button">
+            Our Locations
+            <svg class="button__icon" width="12" height="12">
+              <use xlink:href="sprite.svg#icon-arrow-button12x12"></use>
+            </svg>
+          </button>
+          <!-- transparent button  -->
+          <button
+            type="button"
+            class="button product-button button product-button--transparent"
+          >
+            Franchise
+            <svg class="button__icon" width="12" height="12">
+              <use xlink:href="sprite.svg#icon-arrow-button12x12"></use>
+            </svg>
+          </button>
+        </div>
+        <!-- company__container -->
+      </section>
+      <!-- section contacts-->
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container">
+                <p class="footer-title">homemade ice cream made</p>
+        <p class="footer-title footer-title--big-text">with passion</p>
+
+        <!-- socialfooter  -->
+        <div class="social-footer-wrapp">
+          <ul class="social-footer">
+      <!-- git -->
+      <li class="social-footer__item">
+        <a
+          class="social-footer__link"
+          href="https://github.com/"
+          target="_blank"
+        >
+          <svg class="social-footer__icon" width="34" height="34">
+            <use xlink:href="sprite.svg#icon-git"></use>
+          </svg>
+        </a>
+      </li>
+
+      <!-- telegr -->
+      <li class="social-footer__item">
+        <a
+          class="social-footer__link"
+          href="https://web.telegram.org/k/"
+          target="_blank"
+          >
+          <svg class="social-footer__icon" width="34" height="34">
+            <use xlink:href="sprite.svg#icon-telegram"></use>
+          </svg>
+        </a>
+      </li>
+      <!-- фейсбук -->
+      <li class="social-footer__item">
+        <a
+          class="social-footer__link"
+          href="https://uk-ua.facebook.com/"
+          target="_blank"
+        >
+          <svg class="social-footer__icon" width="34" height="34">
+            <use xlink:href="sprite.svg#icon-fbook"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- social wrapp  -->
+  
+  <div class="footer-contactx-wrapp">
+
+        <span class="footer__contact"> Feel free to contact &nbsp </span>
+        <a
+          class="footer__contact footer__contact--color"
+          href="tel:+380961111111"
+        >
+        +61 (0) 383 766 284</a
+        >
+      </div>
+      <!-- footer-contactx-wrapp  -->
+
+        <p class="footer__all-rights">
+          &copy 2022 - IceCream. All Rights Reserved.
+        </p>
+      </div>
+      <!-- /footer-container -->
+    </footer>
+
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>

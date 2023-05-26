@@ -1,0 +1,208 @@
+// кнопка  бургер
+.mobile-menu-burger {
+    background-color: transparent;
+    position: absolute;
+line-height: 0;
+      top: 17px;
+    right: 20px;
+    border: none;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+      &__icon {
+        fill: var(--burger-color);    
+          line-height: 0;
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     }
+    }
+      .mobile-menu-burger:hover .mobile-menu-burger__icon
+      {
+    fill: var(--color-hover);
+    }
+    
+  // контейнер бургер
+  .burger-menu__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 40px;
+    gap: 60px;
+    overflow: hidden;
+    margin-bottom: 0;
+
+  }
+
+ 
+  .emailmob
+    {
+      margin-top: 32px;
+      margin-bottom: 64px;
+    }
+  // мобільне віkно
+  .burger-menu {
+          position: fixed;
+             overflow: hidden;
+           z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+height: 100vh;
+   background-color: var(--header-color);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    // класвід джаскрипта
+    &.is-open {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: auto;
+    }
+    
+    //  студія портфоліо контакти
+    &__nav {
+      margin-top: 48px;
+      flex-grow: 1;
+      margin-bottom: 20px;
+
+    }
+  
+    &__item:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  
+    &__link {
+      // кольори для студія портфоліо контакти
+      color: var(--body-color);
+      text-decoration: none;
+      @include for-fonts(40px, 500, 1.2);
+    }
+  }
+   
+  // саме вікно мобільного меню
+  
+  .burger-menu__menu,
+  .burger-menu__contacts,
+  .burger-social {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+  }
+  
+  .burger-menu__link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .burger-menu__link:hover {
+    color: var(--color-hover);
+  }
+  
+  .active {
+    color: var(--active-text-color);
+  }
+  
+  // кнокпа закриття та бургер меню
+  .mobile-menu-close-btn {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+    top: 10px;
+    margin-right: 15px;
+  
+    right: 0;
+    &__icon {
+      fill: var(--body-color);
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     }
+    }
+    .mobile-menu-close-btn:hover .mobile-menu-close-btn__icon
+    {
+    fill: var(--color-hover);
+    }
+    
+  
+  
+  .burger-contacts__link {
+    @include for-fonts(24px, 500, 1.2);
+    color: var(--sub-title-text-color);
+    text-decoration: none;
+  }
+  .burger-contacts__link--blue {
+    display: block;
+    @include for-fonts(34px, 500, 1.2);
+    color: var(--active-text-color);
+    margin-bottom: 32px;
+  }
+
+  
+  .burger-social {
+    display: flex;
+    margin-bottom: 0;
+  
+
+    &__link {
+      color: var(--active-text-color);
+      text-decoration: none;
+      @include for-fonts(18px, 500, 1.2);
+    }
+  }
+
+
+  // ********************479
+  @media screen and (max-width: 479px) {
+    .burger-menu__nav
+    {
+margin-bottom: 20px;
+    }
+    .burger-contacts__link--blue
+    {
+      font-size: 25px;
+    }
+    .burger-menu__link
+    {
+      font-size: 30px;
+    }
+    .burger-menu__container
+    {
+      gap: 30px;
+      }
+       .burger-social {
+      display: flex;
+      flex-direction: column;
+             }
+       .burger-social__item:not(:last-child)
+      {
+      margin-bottom: 10px;
+                  }
+
+                  .burger-social__link
+                  {
+                    font-size: 16px;
+                  }
+
+    .burger-social__item
+    {
+   text-transform: uppercase;
+    padding-right: 100px;
+
+    }
+       .burger-contacts__link--blue {
+      @include for-fonts(30px, 500, 1.2);
+         }
+      }  // *******405
+
+
+     
+  //****************480*767
+  @media screen and (min-width: 480px) and (max-width: 767px)
+  {
+      
+  .burger-social__item:not(:last-child) {
+    border-right: 1px solid var(--body-color);
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+}                     //480*****767

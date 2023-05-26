@@ -1,0 +1,180 @@
+.section-contacts
+{
+  padding-top: 60px;
+  background-color: var(--prime-color);
+  margin-top: 60px;
+}
+
+
+.container-contacts
+{
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+    position: relative;
+}
+
+.company__list
+{
+  padding-left: 0;
+}
+  .company__item
+  {
+    background-color: var(--hero-title-color);
+    border-radius: 24px;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    list-style: none;
+    border: 1px solid var(--contacts-card-color);
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+  width: 280px;
+  padding-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+.company__title{
+    border-radius: 4px;
+    display: inline-block;
+    background-color: var(--button-color);
+       font-family: var(--font-first);
+font-weight: 500;
+font-size: 12px;
+line-height: 1.9;
+color: var(--fonts-body-color);
+padding: 4px 22px;
+margin-bottom: 20px;
+
+}
+   
+
+.company__city
+{
+
+font-family: var(--font-first);
+font-weight: 500;
+font-size: 12px;
+line-height: 1.9;
+color: var(--fonts-body-color);
+}
+
+  .company-adress__link
+  {
+  color: var( --card-color-3);
+ 
+  display: inline-block;
+  font-family: var(--font-first);
+  line-height: 1.8;
+  font-weight: 500;
+font-size: 12px;
+line-height: 1.9;
+margin-top: 8px;
+letter-spacing: 0.04em;
+text-decoration: inherit;
+
+}
+
+
+.company-work-day
+{
+  margin-top: 24px;
+
+  margin-bottom: 8px;
+  line-height: 1.8;
+  font-weight: 500;
+font-size: 12px;
+line-height: 1.9;
+}
+
+.company-work-day-weekend
+{
+  margin-bottom: 8px;
+  line-height: 1.8;
+  font-weight: 500;
+font-size: 12px;
+line-height: 1.9;
+}
+
+.company-work-day::before
+{
+  content: "";
+  position: absolute;
+    width: 216px;
+  border-bottom: 1px solid var(--contacts-card-color);
+}
+
+.company-work-clock
+{
+  color: var(--button-color-hero-disable);
+  margin-bottom: 8px;
+}
+
+.company__mail-link
+{
+  margin-top: 6px;
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 500;
+font-size: 12px;
+line-height: 1.9;
+text-decoration: none;
+}
+
+.company__phone-link
+{
+  margin-top: 24px;
+  display: inline-block;
+  position: relative;
+  line-height: 1.8;
+  font-weight: 500;
+font-size: 12px;
+line-height: 1.9;
+text-decoration: none;
+}
+
+
+.company__phone-link::before
+{
+  content: "";
+  position: absolute;
+
+    width: 216px;
+  border-bottom: 1px solid var(--contacts-card-color);
+}
+
+
+
+
+.product-button
+{
+  margin-top: 24px;
+  background-color: var(--button-color);
+  width: 196px;
+padding-top: 12px;
+padding-bottom: 12px;
+font-weight: 600;
+font-size: 14px;
+line-height: 1.3;
+transition: background, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.product-button--transparent
+{
+  background-color: transparent;
+
+    border: 2px solid var(--button-color);
+}
+.product-button--transparent:hover
+{
+  background-color: transparent;
+  border: 2px solid var(--button-border-hover-color);
+}
+
+.product-button--transparent:disabled
+{
+  border: 2px solid var(--button-color-hero-disable);
+}
+.product-button--transparent:focus
+{
+  background-color: transparent;
+}
