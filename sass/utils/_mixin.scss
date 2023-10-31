@@ -1,0 +1,68 @@
+// адаптив
+// до 320
+@mixin mobileMax320 {
+  @media (max-width: 319.98px) {
+    @content;
+  }
+}
+// від 320 
+@mixin mobileMin320 {
+  @media (min-width: 320px) {
+    @content;
+  }
+}
+// від 320 до 571
+@mixin mobileMin320max571 {
+  @media (min-width: 320px) and (max-width: 571px) {
+    @content;
+  }
+}
+// 571 -768 
+@mixin mobileMin571max768 {
+  @media (min-width: 571px) and (max-width: 768px) {
+    @content;
+  }
+}
+// до 571
+@mixin mobileDescInterMax571 {
+  @media (max-width: 571px) {
+    @content;
+  }
+}
+// до 768
+@mixin mobileMax768 {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+// 768-1200
+@mixin mobile-tabletMax1200 {
+  @media (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+// від768 до 1200
+@mixin tablet768-1200 {
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    @content;
+  }
+}
+// від 768
+@mixin tabletMin768 {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+// від 1200
+@mixin desktopMin1200 {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+// транзишен
+@mixin transition($property) {
+  $duration: 250ms;
+  $timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+  transition: $property $duration $timing-function;
+}

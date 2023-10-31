@@ -1,0 +1,60 @@
+.gallery-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: var(--prime-color);
+  position: relative;
+}
+// галер  конт
+.gallery-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+
+  // 768-1199
+  @include tablet768-1200 {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  // макс 1200
+  @include mobile-tabletMax1200 {
+    padding: 0;
+  }
+  // від1200
+  @include desktopMin1200 {
+    width: 1200px;
+    padding-top: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: url(../images/gallery/bg/bgDesc.png);
+  }
+}
+
+// автослайдер галереї
+.gallery-slider {
+  position: absolute;
+  @include mobileMax320 {
+    margin-top: 20px;
+    width: 70vw;
+    margin-left: 65px;
+  }
+  // 320 - 571
+  @include mobileMin320max571 {
+    width: 80vw;
+    margin-left: 25px;
+  }
+  // 571-768
+  @include mobileMin571max768 {
+    width: 70vw;
+    margin-left: 40px;
+  }
+
+  // 768-1200
+  @include tablet768-1200 {
+    width: 80vw;
+  }
+  @include desktopMin1200 {
+    width: 100vw;
+    padding-left: 70px;
+  }
+}

@@ -1,0 +1,73 @@
+html {
+  scroll-behavior: auto;
+  background-color: var(--prime-color);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--fonts-body-color);
+  overflow: auto;
+}
+
+// світлини
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  transition: all 2.3s ease 0.3s;
+  &:hover {
+    transform: scale(1.2, 0.8);
+  }
+}
+.section {
+  padding: 60px 0;
+}
+// до 320
+.container {
+  max-width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  // від 768
+  @include tabletMin768 {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    max-width: 1200px;
+    padding: 0 16px;
+  }
+}
+// кнопки
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 14px 37px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.31;
+  color: var(--button-text-color-hero);
+  background-color: var(--button-color);
+  border-radius: 22px;
+  transition: ease-out 0.4s;
+  // ховерні фокуси
+  &:hover {
+    background: var(--button-border-hover-color);
+    color: var(--button-text-color-hero);
+  }
+  &:focus {
+    background: var(--button-border-hover-color);
+    color: var(--hero-title-color);
+  }
+  &:disabled {
+    color: var(--button-color-hero-disable);
+  }
+}

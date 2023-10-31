@@ -1,0 +1,168 @@
+.section-review {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0 auto;
+
+  // min 768px
+  @include tabletMin768 {
+    padding-bottom: 20px;
+  }
+  // min 1200px
+  @include desktopMin1200 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+// відгуки   конт
+.customer-container {
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 30px;
+
+  @include mobileMin320 {
+    margin-bottom: 15px;
+  }
+
+  // 768-1200
+  @include tablet768-1200 {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background: url(../images/review/bg/bgTab.png);
+  }
+  // від1200
+  @include desktopMin1200 {
+    width: 1200px;
+    padding-top: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: url(../images/review/bg/bgDesc.png);
+  }
+}
+// Max1200
+.gallery-container {
+  @include mobile-tabletMax1200 {
+    padding: 0;
+  }
+}
+
+// слайдер
+.review__slider {
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-left: 0;
+  margin: 0 auto;
+  height: 30vw;
+  padding: 20px;
+  // border: 1px solid red;
+
+  // 320
+  @include mobileMax320 {
+  display: none;
+  }
+  // 320 - 571
+  @include mobileMin320max571 {
+    margin-top: 90px;
+    width: 75vw;
+    overflow: scroll;
+  }
+  // 571-768
+  @include mobileMin571max768 {
+    margin-top: 125px;
+    width: 80vw;
+  }
+
+  // 768-1200
+  @include tablet768-1200 {
+    margin-top: 200px;
+    width: 95vw;
+
+    margin-left: auto;
+  }
+  @include desktopMin1200 {
+    margin-top: 300px;
+    width: 68vw;
+  }
+}
+
+// для відгука
+.review__item {
+  text-align: center;
+  position: absolute;
+  height: auto;
+  border-radius: 10px;
+  color: var(--burger-color);
+  border-radius: 24px;
+  // 320
+  @include mobileMax320 {
+    display: none;
+  }
+
+}
+
+// фотка
+.review__avatar {
+  width: 85px;
+  height: 85px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  // від 320
+  @include mobileMin320 {
+    margin-bottom: 5px;
+   }
+}
+
+// сам текст
+.review__fidback {
+  font-family: var(--font-body);
+  position: relative;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+    // до 571
+  @include mobileDescInterMax571 {
+    font-size: 14px;
+  }
+  // min 768
+  @include tabletMin768 {
+    font-size: 17px;
+    line-height: 2.16;
+  }
+  // мін 1200
+  @include desktopMin1200 {
+    font-size: 45px;
+    line-height: 1.86;
+    padding: 25px;
+  }
+}
+// відео
+.video {
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px 5px #ff8080, -9px 5px 15px 5px #ffe488,
+    -7px -5px 15px 5px #8cff85, 12px -5px 15px 5px #80c7ff,
+    12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b,
+    -10px -7px 27px 1px #8e5cff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+   @include mobileMax768 {
+    display: none;
+   }
+
+
+
+  @include tablet768-1200 {
+    width: 500px;
+  }
+
+  @include desktopMin1200 {
+    width: 500px;
+  }
+}

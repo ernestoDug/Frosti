@@ -1,298 +1,433 @@
-
-.section-hero {
-   margin: 0 auto;
-   height: 450px;
-   padding-top: 50px;
+.hero-section {
+  width: 100%;
+  overflow: hidden;
+  margin-top: -1px;
   background-color: var(--prime-color);
+  // від 768
+  @include tabletMin768 {
+    overflow: visible;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    margin-top: -87px;
+    padding-top: 87px;
+  }
+}
+// хероу контейнер
+.container-hero {
   position: relative;
-}
-
-.hero-thumb,
-.hero-thumb-points
-{
-  position: absolute;
-  bottom: 0;
-left: 83px;
-}
-
-.hero-thumb
-{
-
-animation-name: puffIn;
-animation-duration: 5s;
-animation-fill-mode: none;
-animation-direction: alternate;
-}
-
-.hero-thumb-points
-{
-  left: 0;
-  
-animation-name: puffIn;
-animation-duration: 7s;
-animation-fill-mode: none;
-animation-direction: normal;
-}
-
-.hero__title {
-     font-size:  26px;
-    line-height: 1.2;
-    color: var(--hero-title-color);
-    font-family: var(--font-sacond);
-    text-transform: uppercase;
+  padding-top: 25px;
+  height: 444px;
+  background-repeat: no-repeat;
+  background-position: bottom 10px right -25px;
+  // до 768
+  @include mobileMax768 {
+    background-image: url("../images/hero/bg/dot_mob.png");
   }
-.hero-title-last-word
-{
-  font-size: 34px;
-  line-height: 0.9;
-
-}
-// *
-  .hero-button-wrapp
-  {
-    display: flex;
-    margin-top: 32px;
-    gap: 12px;
-    align-items: baseline;
+  // від 768
+  @include tabletMin768 {
+    height: 330px;
+    padding-top: 20px;
+    background-image: url("../images/hero/bg/dot_tab.png");
   }
-
-  // button
- 
-  .hero__button
-  {
-   padding: 0;
- 
-  height: 38px;
-border-radius: 8px;
-font-weight: 600;
-font-size: 12px;
-line-height: 1.3;
-background-color: transparent;
-border-color: transparent;
+  // від 1200
+  @include desktopMin1200 {
+    height: 574px;
+    padding-top: 60px;
+    background-image: url("../images/hero/bg/dot_desc.png");
   }
-
-  // *
-  .hero__button--first
-  {
-    margin: 0;
-    padding-left: 26px;
-    padding-right: 26px;
-    border: 2px solid var(--button-color);
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .hero-button__link:not(.hero-button__link--color)
-  {
-    text-decoration: none;
-  }
-  // *
-  .hero__button--first:hover
-  {
-    border: 2px solid var(--button-border-hover-color);
-  }
-
-   .hero-button__link--color
-        {
-                    display: inline-block;
-          color: var(--button-color);
-          font-size: 12px;
-          line-height: 1.2;
-          font-weight: 600;
-          transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-       
-
-          &:focus
-          {
-            color: var(--hero-title-color);
-          }
-          
-          &:hover
-          {
-            color: var(--button-border-hover-color);
-          }
-          &:disabled
-          {
-           color: var(--button-color-hero-disable);
-          }
-        }
-
-// *
-
-
-
-
-
-
-
-// @media (min-device-pixel-ratio: 2),
-//   (min-resolution: 192dpi),
-//   (min-resolution: 2dppx) {
-//   .section-ofer {
-//     background-image: linear-gradient(
-//         to right,
-//         var(--ofer-color),
-//         var(--ofer-color-finish-gradient)
-//       ),
-//       url("../images/bg-image-mob320@2x.jpg");
-//   }
-// }
-
-/* кнопка */
-.button {
-  @include flex-center-center();
-  width: 200px;
-  margin: 0 auto;
-  border-radius: 4px;
-  background-color: var(--active-text-color);
-  color: var(--header-color);
-  cursor: pointer;
-  border: none;
-  @include for-fonts(16px, 700, 1.9);
-  padding: 10px 24px;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* ховери] */
-  &:hover,
-  &:focus {
-    background-color: var(--color-hover);
-    color: var(--header-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  }
-}
-
-// 320**************************479
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  .section-ofer__title {
-    width: 290px;
-    margin-bottom: 30px;
-    @include for-fonts(20px, 900, 1.6);
-  }
-  .section-ofer {
-    max-width: 479px;
-    padding-bottom: 118px;
-    padding-top: 118px;
-    margin: 0 auto;
-  }
-} // @media screen and (max-width: 479px)
-
-// ********************************************
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .section-ofer__title {
-    @include for-fonts(26px, 900, 1.6);
-
-    letter-spacing: 0.06em;
-  }
-  .section-ofer {
-    background-color: var(--ofer-bg-color);
-    background-image: linear-gradient(
-        to right,
-        var(--ofer-color),
-        var(--ofer-color-finish-gradient)
-      ),
-      url("../images/bg-image-mob.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 767px;
-    padding-bottom: 118px;
-    padding-top: 118px;
-    margin: 0 auto;
-  }
-  .section-ofer__title {
-    margin-bottom: 30px;
-    width: 360px;
-  }
-} // @media screen and (min-width: 480px) and (max-width: 767px) {
-
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .section-ofer {
-    background-image: linear-gradient(
-        to right,
-        var(--ofer-color),
-        var(--ofer-color-finish-gradient)
-      ),
-      url("../images/bg-image-mob@2x.jpg");
-  }
-}
-
-// ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .section-ofer {
-    background-image: linear-gradient(
-      to right,
-      var(--ofer-color),
-      var(--ofer-color-finish-gradient)
-    ), url("../images/bg-image-tablet.jpg");
-    max-width: 1199;
-    padding-bottom: 118px;
-    padding-top: 118px;
-    margin: 0 auto;
-  }
-
-  .section-ofer__title {
-    margin: 0 auto;
-    margin-bottom: 30px;
-    width: 360px;
-    text-align: center;
-    font-size: 26px;
-  }
-}
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .section-ofer {
-    background-image: linear-gradient(
-      to right,
-      var(--ofer-color),
-      var(--ofer-color-finish-gradient)
-    ), url("../images/bg-image-tablet@2x.jpg");
-  }
-}
-// @media screen and (min-width: 768px) and (max-width: 1199px)
-
-// ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
-@media screen and (min-width: 1200px) {
-  .section-ofer {
-    max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    margin: 0 auto;
-    background-image: linear-gradient(
-        to right,
-        var(--ofer-color),
-        var(--ofer-color-finish-gradient)
-      ),
-      url("../images/bg-image-desk.jpg");
-    &__title {
-      animation-name: com_sl2;
-      animation-iteration-count: infinite;
-      animation-duration: 15s;
-      animation-fill-mode: none;
-      animation-direction: alternate;
-      width: 696px;
-      margin: 0 auto;
-      margin-bottom: 30px;
-      font-size: 44px;
-      text-align: center;
-    }
-  }
-
+  //     для retina
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .section-ofer {
-      background-image: linear-gradient(
-          to right,
-          var(--ofer-color),
-          var(--ofer-color-finish-gradient)
-        ),
-        url("../images/bg-image-desk@2x.jpg");
+    .container-hero {
+      // до 768 ----------------------------------------------------------
+      @include mobileMax768 {
+        background-image: url("../images/product/hero@2x/dot_mob@2x.png");
+      }
     }
   }
+  //    для retina морозиво таб
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .container-hero {
+      // 768-1199
+      @include tablet768-1200 {
+        background-image: url("../images/product/hero@2x/dot_tab@2x.png");
+      }
+    }
+  }
+  //     для retina морозиво дес
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .container-hero {
+      // від 1200
+      @include desktopMin1200 {
+        background-image: url("../images/product/hero@2x/dot_desc@2x.png");
+      }
+    }
+  }
+}
 
-  .button {
-    width: 216px;
-    padding-right: 32px;
-    padding-left: 32px;
+// контейнер великого морозива
+.bigIceThumb {
+  width: 346px;
+  height: 344px;
+  position: relative;
+  top: 150px;
+  left: 12px;
+  // від 768
+  @include tabletMin768 {
+    width: 335px;
+    height: 333px;
+    left: 500px;
+    top: 133px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    width: 534px;
+    height: 534px;
+    top: 225px;
+    bottom: 0;
+    left: 705px;
+    z-index: 0;
+  }
+}
+// велике морозиво
+.bigIce {
+  position: absolute;
+  transition: all 2.3s ease 0.3s;
+  // ховер
+  &:hover {
+    transform: skew(30deg, 20deg);
+  }
+
+  // мак 768
+  @include mobileMax768 {
+    left: 20%;
+  }
+  // від 768
+  @include tabletMin768 {
+    top: 33;
+    left: 74;
+    width: 145px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    width: 236px;
+    top: 56;
+    left: 119;
+  }
+}
+// контейнер заголовка
+.hero-titleWrapp {
+  position: absolute;
+  // від 320
+  @include mobileMin320 {
+    top: 136px;
+  }
+  // від 768
+  @include tabletMin768 {
+    top: 20px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    top: 60px;
+  }
+}
+// заголовок
+.hero-titleWrapp__hero-title {
+  margin-bottom: 20px;
+  max-width: 218px;
+  max-height: 106px;
+  letter-spacing: 0.04em;
+  font-family: var(--font-stack);
+  transition: all 2.3s ease 0.3s;
+  &:hover {
+    transform: scale(1.2, 0.8);
+  }
+
+  // від 768
+  @include tabletMin768 {
+    max-width: 162px;
+    max-height: 80px;
+    font-size: 22px;
+    line-height: 1.14;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    max-width: 277px;
+    max-height: 137px;
+    font-weight: 400;
+    font-size: 38px;
+    margin-bottom: 24px;
+  }
+}
+// спан насолода
+.spanPassion {
+  color: var(--span-color);
+  font-size: 40px;
+  line-height: 0.9;
+  // до 768
+  @include mobileMax768 {
+    font-size: 20px;
+  }
+  // від 768
+  @include tabletMin768 {
+    font-size: 30px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    font-size: 50px;
+  }
+}
+
+// посилання
+.hero-link-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 50px;
+  // до 768
+  @include mobileMax768 {
+    margin-top: -10px;
+  }
+  // 768 - 1200
+  @include tablet768-1200 {
+    margin-top: 30px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    gap: 12px;
+  }
+}
+// продукти
+.hero-link-list__products {
+  display: flex;
+  text-align: center;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.3;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 24px;
+  color: var(--button-border-hover-color);
+  border-radius: 20px;
+  // ховерні фокуси
+  &:hover,
+  &:focus {
+    color: var(--button-text-color-hero);
+    border: 2px solid var(--button-border-hover-color);
+  }
+
+  // 1200
+  @include desktopMin1200 {
+    font-size: 14px;
+    width: 107px;
+    height: 40px;
+  }
+}
+// секрети
+.hero-link-list__secrets {
+  display: flex;
+  text-align: center;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.3;
+  width: 82px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  color: var(--button-border-hover-color);
+  border-radius: 20px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // ховерні фокуси
+  &:hover,
+  &:focus {
+    color: var(--button-text-color-hero);
+    border: 2px solid var(--button-border-hover-color);
+  }
+  // 1200
+  @include desktopMin1200 {
+    font-size: 14px;
+    width: 138px;
+    height: 40px;
+  }
+}
+
+// цифри зправа
+.hero-numbersList {
+  display: none;
+
+  @include tabletMin768 {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 42px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    display: block;
+    position: absolute;
+    top: 68px;
+    right: 20px;
+  }
+}
+// лішки
+.hero-numbersList__firstItem {
+  position: relative;
+  margin-bottom: 16px;
+  transition: all 2.3s ease 0.3s;
+  &:hover {
+    transform: scale(1.2, 0.8);
+  }
+}
+.hero-numbersList__sacondItem {
+  position: relative;
+  transition: all 2.3s ease 0.3s;
+  &:hover {
+    transform: scale(1.2, 0.8);
+  }
+}
+// самі цифри
+.hero-numbersList__numberFirst,
+.hero-numbersList__numberSacond {
+  position: relative;
+  text-align: right;
+  font-family: Titan One;
+  color: var(--span-color);
+  margin: 0;
+  z-index: 0;
+
+  // від768
+  @include tabletMin768 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+
+    &:after {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+// описи під цифрами
+.hero-numbersList__number-description {
+  @include tabletMin768 {
+    font-weight: 500;
+    text-align: right;
+    font-size: 9px;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    font-size: 14px;
+  }
+}
+// контейнер для маленького кружечка морозива
+.smallIceThumb {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  // від 768
+  @include tabletMin768 {
+    display: block;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 16px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    bottom: 60px;
+  }
+}
+// маленький кружечок .
+.smallIceThumb-img {
+  transition: all 2.3s ease 0.3s;
+  &:hover {
+    transform: rotate(0.5turn);
+  }
+
+  // від 768
+  @include tabletMin768 {
+    width: 145px;
+    height: 154px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    width: 213px;
+    height: 216px;
+  }
+}
+// інфа біля маленького кружечка морозива
+.hero-button-wrapp__txt {
+  // від 768
+  @include tabletMin768 {
+    width: 114px;
+    height: 48px;
+    font-size: 8px;
+    line-height: 1.3em;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    width: 200px;
+    height: 78px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-left: 10px;
+  }
+}
+// кнопокчка
+.heroBtn {
+  background-color: var(--button-color);
+  border-radius: 7px;
+  cursor: pointer;
+  // ховери та фокуси
+  &:hover,
+  &:focus {
+    fill: var(--burger-color);
+    transform: translateY(2px);
+    background-color: var(--button-border-hover-color);
+  }
+
+  // від 768
+  @include tabletMin768 {
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    display: flex;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    display: flex;
+  }
+  @include transition(transform);
+}
+
+// стрілкка
+.hero-buttonSVG {
+  fill: var(--button-color-hero-disable);
+  &:focus,
+  &:hover {
+    fill: var(--hero-title-color);
   }
 }

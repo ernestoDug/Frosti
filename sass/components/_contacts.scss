@@ -1,0 +1,267 @@
+.section-contacts {
+  background-color: var(--sacond-color);
+  padding-bottom: 40px;
+
+  // від 1200
+  @include desktopMin1200 {
+    padding-bottom: 120px;
+  }
+
+  .container {
+    // від 768
+    @include tabletMin768 {
+      padding: 0 16px;
+    }
+  }
+}
+
+.contacts-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 0;
+  list-style: none;
+  margin-top: 0;
+  // до 768
+  @include mobileMax768 {
+    gap: 20px;
+  }
+
+  // від 768
+  @include tabletMin768 {
+    flex-wrap: nowrap;
+  }
+}
+// лішки
+.contacts-item {
+  border-radius: 24px;
+  width: 280px;
+  padding: 40px 32px;
+
+  // від 768
+  @include tabletMin768 {
+    width: calc(33.3333333333% - 20px);
+    padding: 40px 32px;
+  }
+
+  // від 1200
+  @include desktopMin1200 {
+    padding: 40px;
+  }
+}
+// для різних фонів контактів
+// фон картки 1
+.item1 {
+  background-color: var(--card-color-1);
+}
+// фон заголовка 1 кафе
+.item1 > .contacts-item__title {
+  background-color: var(--card-color-2);
+}
+// фон картки 2
+.item2 {
+  background-color: var(--card-color-2);
+}
+
+// фон заголовка 2 фуд трек
+.item2 > .contacts-item__title {
+  background-color: var(--card-color-3);
+}
+// фон картки 3
+.item3 {
+  background-color: var(--card-color-3);
+}
+// фон заголовка 3 кафе
+.item3 > .contacts-item__title {
+  background-color: var(--card-color-1);
+}
+
+// назва на контактніих картках
+.contacts-item__title {
+  padding: 0px 25px;
+  margin-bottom: 32px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  // від 768
+  @include tabletMin768 {
+    font-size: 16px;
+    line-height: 1.875;
+    border-radius: 6px;
+    height: 28px;
+  }
+}
+// місто
+.contacts-item__town {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: 0.04em;
+  color: var(--button-border-hover-color);
+
+  // від 768
+  @include tabletMin768 {
+    font-size: 14px;
+    line-height: 1.857;
+  }
+
+  // від 1200
+  @include desktopMin1200 {
+    font-size: 16px;
+    line-height: 1.875;
+  }
+}
+// лінія в картках
+.line {
+  border-bottom: 1px solid var(--button-border-hover-color);
+
+  // до 768
+  @include mobileMax768 {
+    margin-top: 12px;
+    padding-bottom: 22px;
+  }
+
+  // від 768
+  @include tabletMin768 {
+    margin-top: 12px;
+    padding-bottom: 30px;
+  }
+
+  // від 1200
+  @include desktopMin1200 {
+    margin-top: 10px;
+    padding-bottom: 40px;
+  }
+}
+// дні роботи
+.contacts-item__work-days {
+  margin-top: 24px;
+  margin-bottom: 0px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.83;
+  color: var(--button-border-hover-color);
+
+  // від 768
+  @include tabletMin768 {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 32px;
+  }
+
+  // від 1200
+  @include desktopMin1200 {
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.04em;
+  }
+
+  // від 768
+  @include tabletMin768 {
+    margin-top: 12px;
+  }
+}
+
+// години
+.contacts-item__work-hours {
+  margin: 0px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.8;
+
+  // від 768
+  @include tabletMin768 {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  // від 1200
+  @include desktopMin1200 {
+    font-size: 16px;
+    line-height: 1.875;
+  }
+}
+// посилання на контакти
+.contacts-item__link {
+  display: block;
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--right-reserv-color);
+
+  // від 768
+  @include tabletMin768 {
+    font-size: 14px;
+    line-height: 1.85;
+    margin-top: 32px;
+  }
+
+  // від 1200
+  @include desktopMin1200 {
+    font-size: 16px;
+    line-height: 1.81;
+  }
+
+  &--email {
+    margin-top: 0px;
+  }
+}
+// блок кнопок
+.contacts-wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 31px;
+  justify-content: center;
+  gap: 10px;
+
+  // від 768
+  @include tabletMin768 {
+    flex-direction: row;
+    margin-top: 60px;
+    gap: 14.5px;
+  }
+
+  // від 1200
+  @include desktopMin1200 {
+    gap: 12px;
+  }
+}
+// кнопочка
+.contacts__btn {
+  justify-content: center;
+  width: 161px;
+  height: 44px;
+  padding: 0;
+  line-height: 44px;
+  // gap: 12px;
+  cursor: pointer;
+  @include transition(background-color);
+
+  @include mobileMax768 {
+    padding: 0 30px;
+    width: auto;
+  }
+
+  // від 768
+  @include tabletMin768 {
+    padding: 0 35px;
+    width: auto;
+  }
+}
+// ховерні фокуси
+.contacts__btn:hover,
+.contacts__btn:focus {
+  background-color: var(--button-border-hover-color);
+}
+// фокус
+.contacts__btn:focus {
+  fill: var(--burger-color);
+}

@@ -1,34 +1,26 @@
 /* змінні */
 :root {
   // кольори
-  --prime-color: #84A178;
-  --fonts-body-color: #131313;
-  --burger-color: #FFFFFF;
-  --hero-title-color: #FCFCFC;
-  --right-reserv-color: #7A7A7A;
+  --prime-color: #ffdab9;
+  --sacond-color: #f6d19b;
+  --fonts-body-color: #8b4513;
+  --burger-color: #ffffff;
+  --hero-title-color: #fcfcfc;
+  --right-reserv-color: #7a7a7a;
+  --backdropColor: rgba(143, 140, 140, 0.8);
+
   // card colors
-  --card-color-1: #AEC6A5;
-  --card-color-2: #EFD478;
-  --card-color-3: #D6936D;
-  --contacts-card-color: #E1E1E1;
+  --card-color-1: #aec6a5;
+  --card-color-2: #efd478;
+  --card-color-3: #dba786;
+  --contacts-card-color: #e1e1e1;
+  --span-color: #ff69b4;
   // color button
-  --button-color: #F8D24E;
+  --button-color: #f8d24e;
   --button-text-color-hero: #000000;
-  --button-border-hover-color: #0A8817;
-  --button-color-hero-disable: #ABABAB;
-
-
-  
-   
-
-
-
-  // геометрія
-  --card-gap: 30px;
+  --button-border-hover-color: #0a8817;
+  --button-color-hero-disable: #ababab;
   // fonts
-  --font-first: Montserrat;
-  --font-sacond: "Seymour One";
-  --font-reserv: Verdana;
+  --font-stack: "Seymour One";
+  --font-body: "DM Sans", sans-serif;
 }
-
-// outline: 1px bisque solid;

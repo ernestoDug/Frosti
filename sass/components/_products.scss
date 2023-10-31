@@ -1,0 +1,608 @@
+.products-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: var(--sacond-color);
+}
+// прод конт
+.products-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+
+  // 768-1199
+  @include tablet768-1200 {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background: url(../images/product/bg/bgTab.png);
+  }
+  // від1200
+  @include desktopMin1200 {
+    width: 1200px;
+    padding-top: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: url(../images/product/bg/bgDesc.png);
+  }
+}
+// заголовок спан
+.products-container__titleSpan {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-stack);
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: var(--button-border-hover-color);
+  font-size: 12px;
+  // max 767
+  @include mobileMax768 {
+    font-size: 16px;
+    line-height: 1.16;
+  }
+  // 768-1199
+  @include tablet768-1200 {
+    font-size: 18px;
+    line-height: 1.15;
+  }
+  // min1200
+  @include desktopMin1200 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+  }
+}
+// h2 заголовок
+.products-container__title {
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+  font-family: var(--font-stack);
+  margin-left: auto;
+  margin-right: auto;
+  // makc 320
+  @include mobileMax320 {
+    font-size: 15px;
+    line-height: 1.147;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  // makc 768
+  @include mobileMax768 {
+    font-size: 24px;
+    line-height: 1.147;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  // 768-1199 /
+  @include tablet768-1200 {
+    font-size: 35px;
+    line-height: 1.145;
+    margin-top: 18px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    font-size: 50px;
+    line-height: 1.137;
+    letter-spacing: 0.06em;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+// список карток *************************************************
+.products-container__list {
+  list-style: none;
+  margin-top: 20px;
+  // 320
+  @include mobileMax320 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+  }
+  // 321-767
+  @include mobileMax768 {
+    display: block;
+    width: 320px;
+    height: auto;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  // 768-1199
+  @include tablet768-1200 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 120px;
+  }
+}
+// макс 320
+@include mobileMax320 {
+  .products-container__item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+  }
+}
+// 321 -767
+@include mobileMax768 {
+  .products-container__item {
+    position: relative;
+    width: 280px;
+    height: 489px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 24px;
+    padding-top: 140px;
+  }
+}
+// 768 1199
+@include tablet768-1200 {
+  .products-container__item {
+    position: relative;
+    width: 224px;
+    height: 473px;
+    border-radius: 24px;
+    padding-top: 138px;
+  }
+}
+// від 1200
+@include desktopMin1200 {
+  .products-container__item {
+    position: relative;
+    width: 368px;
+    height: 535px;
+    border-radius: 24px;
+    padding-top: 261px;
+  }
+}
+// крім останньої дитини
+.products-container__item:not(:last-child) {
+  // 768-1200
+  @include tablet768-1200 {
+    margin-right: 16px;
+  }
+}
+// крім останньої дитини
+.products-container__item:not(:last-child) {
+  // від 1200
+  @include desktopMin1200 {
+    margin-right: 32px;
+  }
+}
+// перед контейнер
+.products-container__item::before {
+  display: block;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  // макс 767
+  @include mobileMax768 {
+    height: 280px;
+    width: 280px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  // 768 -1199
+  @include tablet768-1200 {
+    height: 224px;
+    width: 224px;
+    margin-bottom: 32px;
+    padding: 70px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    height: 394px;
+    width: 368px;
+    margin-bottom: 32px;
+    padding: 70px;
+  }
+}
+//    для першої картки1111111111111111111111111111111111111111111111
+.products-container__item:nth-child(1) {
+  position: relative;
+  margin-top: 140px;
+  padding: 30px;
+  background-color: var(--card-color-1);
+}
+// для першої картки
+.products-container__item:nth-child(1)::before {
+  // макс 767 морозиво
+  @include mobileMax768 {
+    background-image: url("../images/product/ice-cream_mob.png");
+    position: absolute;
+    left: 2px;
+    top: -140px;
+    padding: 30px;
+  }
+  // 768-1199 морозвио
+  @include tablet768-1200 {
+    // *
+    background-image: url("../images/product/ice-cream_tab.png");
+    margin-right: 15px;
+    position: absolute;
+    left: 2px;
+    top: -138px;
+    padding: 30px;
+    width: 224px;
+  }
+  // від 1200 морозиво
+  @include desktopMin1200 {
+    // *
+    background-image: url("../images/product/ice-cream_desk.png");
+    margin-right: 30px;
+    position: absolute;
+    left: 2px;
+    top: -261px;
+    padding: 30px;
+    width: 368px;
+  }
+}
+//     для retina морозвио моб
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .products-container__item:nth-child(1)::before {
+    // до 768 ----------------------------------------------------------
+    @include mobileMax768 {
+      background-image: url("../images/product/product@2x/ice-cream_mob@2x.png");
+    }
+  }
+}
+//    для retina морозиво таб
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .products-container__item:nth-child(1)::before {
+    // 768-1199
+    @include tablet768-1200 {
+      background-image: url("../images/product/product@2x/ice-cream_tab@2x.png");
+    }
+  }
+}
+//     для retina морозиво дес
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .products-container__item:nth-child(1)::before {
+    // від 1200
+    @include desktopMin1200 {
+      background-image: url("../images/product/product@2x/ice-cream_desk@2x.png");
+    }
+  }
+}
+//    для другої картки2222222222222222222222222222222222222222222222222
+.products-container__item:nth-child(2) {
+  position: relative;
+  margin-top: 140px;
+  padding: 30px;
+  background-color: var(--card-color-2);
+}
+// для 2 картки
+.products-container__item:nth-child(2)::before {
+  // макс 767 кава
+  @include mobileMax768 {
+    background-image: url("../images/product/coffee_desk.png");
+    position: absolute;
+    left: 2px;
+    top: -140px;
+    padding: 30px;
+  }
+  // 768-1199 кава
+  @include tablet768-1200 {
+    background-image: url("../images/product/coffee_tab.png");
+    margin-right: 15px;
+    position: absolute;
+    left: 2px;
+    top: -138px;
+    padding: 30px;
+    width: 224px;
+  }
+  // від 1200 кава
+  @include desktopMin1200 {
+    // *
+    background-image: url("../images/product/coffee_desk.png");
+    margin-right: 30px;
+    position: absolute;
+    left: 2px;
+    top: -261px;
+    padding: 30px;
+    width: 368px;
+  }
+}
+// //    для retina кава моб
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .products-container__item:nth-child(2)::before {
+    // до 768 ----------------------------------------------------------
+    @include mobileMax768 {
+      background-image: url("../images/product/product@2x/coffee_mob@2x.png");
+    }
+  }
+}
+//    для retina кава таб
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .products-container__item:nth-child(2)::before {
+    // 768-1199
+    @include tablet768-1200 {
+      background-image: url("../images/product/product@2x/coffee_tab@2x.png");
+    }
+  }
+}
+//     для retina кава дес
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .products-container__item:nth-child(2)::before {
+    // від 1200
+    @include desktopMin1200 {
+      background-image: url("../images/product/product@2x/coffee_desk@2x.png");
+    }
+  }
+}
+// третя картка33333333333333333333333333333333333333333333333333333333333
+.products-container__item:nth-child(3) {
+  position: relative;
+  margin-top: 140px;
+  padding: 30px;
+  background-color: var(--card-color-3);
+}
+// для 3 картки
+.products-container__item:nth-child(3)::before {
+  // макс 767 шейк
+  @include mobileMax768 {
+    background-image: url("../images/product/milkshakes_mob.png");
+    position: absolute;
+    left: 2px;
+    top: -140px;
+    padding: 30px;
+  }
+  // 768-1199 шейк
+  @include tablet768-1200 {
+    // *
+    background-image: url("../images/product/milkshakes_tab.png");
+    margin-right: 15px;
+    position: absolute;
+    left: 2px;
+    top: -138px;
+    padding: 30px;
+    width: 224px;
+  }
+  // від 1200 шейк
+  @include desktopMin1200 {
+    // *
+    background-image: url("../images/product/milkshakes_desk.png");
+    margin-right: 30px;
+    position: absolute;
+    left: 2px;
+    top: -261px;
+    padding: 30px;
+    width: 368px;
+  }
+}
+// //    для retina шейк моб
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .products-container__item:nth-child(3)::before {
+    // до 768 ----------------------------------------------------------
+    @include mobileMax768 {
+      background-image: url("../images/product/product@2x/milkshakes_mob@2x.png");
+    }
+  }
+}
+//    для retina шейк таб
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .products-container__item:nth-child(3)::before {
+    // 768-1199
+    @include tablet768-1200 {
+      background-image: url("../images/product/product@2x/milkshakes_tab@2x.png");
+    }
+  }
+}
+//     для retina шейк
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .products-container__item:nth-child(3)::before {
+    // від 1200
+    @include desktopMin1200 {
+      background-image: url("../images/product/product@2x/milkshakes_desk@2x.png");
+    }
+  }
+}
+
+//    назви карток
+.products-container__item--name {
+  position: relative;
+  font-family: var(--font-stack);
+  font-weight: 200;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--fonts-body-color);
+  font-size: 16px;
+  line-height: 1.15;
+  //    макс 320
+  @media screen and (max-width: 320px) {
+    padding-top: 160px;
+    padding-bottom: 32px;
+    position: relative;
+  }
+  // 321-767
+  @include mobileMax768 {
+    position: relative;
+    padding-top: 160px;
+    padding-bottom: 32px;
+  }
+  // 768-1199
+  @include tablet768-1200 {
+    position: relative;
+    padding-top: 118px;
+    padding-bottom: 32px;
+    font-size: 14px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    position: relative;
+    font-size: 25px;
+    line-height: 1.13;
+    padding-top: 165px;
+    padding-bottom: 32px;
+  }
+}
+// опис карток
+.products-container__item--described {
+  margin-bottom: 32px;
+  font-family: var(--font-body);
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  // max 768
+  @include mobileMax768 {
+    line-height: 1.52;
+  }
+  // 768-1200
+  @include mobile-tabletMax1200 {
+    line-height: 1.5;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    font-size: 16px;
+    line-height: 1.76;
+  }
+}
+// кнопки стрілки на картках
+.products__button {
+  display: flex;
+  justify-content: center;
+  background-color: var(--button-color);
+  border-radius: 7px;
+  border: 1px solid var(--burger-color);
+  margin: 0;
+  padding: 0;
+  min-height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  &:hover {
+    background-color: var(--button-border-hover-color);
+  }
+  // макс 1200
+  @include mobile-tabletMax1200 {
+    margin-bottom: 30px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    margin-bottom: 60px;
+  }
+  cursor: pointer;
+  @include transition(transform);
+}
+// ховери та фокуси
+.products-container__button:hover,
+.products-container__button:focus {
+  transform: translateY(5px);
+}
+// стрілки
+.product__arrowBtn {
+  fill: var(--button-color-hero-disable);
+}
+// оверелйні стилі
+// для всього оврелею карток
+.overlay__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+// доданий клас до кнопки з стрілкою перевворот стрілки
+.rotateSVG {
+  transform: rotate(180deg);
+  background-color: var(--button-border-hover-color);
+  fill: var(--burger-color);
+  border-radius: 7px;
+}
+
+// загальний стиль для оверелю
+.productsCardOverlay {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  padding: 80px 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 24px;
+  transform: translateY(100%);
+  @include transition(transform);
+
+  // від 320
+  @include mobileMin320 {
+    top: 120px;
+    height: 65%;
+  }
+  // від 768
+  @include tabletMin768 {
+    height: 75%;
+    top: 90px;
+  }
+}
+// коли відкрито
+.overlayOpen {
+  transform: translateY(10%);
+  @include tabletMin768 {
+    transform: translateY(-10%);
+  }
+}
+
+// колір оверелею 1
+.card_1_overlay {
+  background-color: var(--card-color-2);
+}
+// колір оверелею 2
+.card_2_overlay {
+  background-color: var(--card-color-3);
+}
+// колір оверелею 3
+.card_3_overlay {
+  background-color: var(--card-color-1);
+}

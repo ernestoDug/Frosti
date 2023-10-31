@@ -1,0 +1,102 @@
+.advantages-section {
+  background-color: var(--sacond-color);
+  padding-top: 0px;
+  padding-bottom: 60px;
+  // 1200
+  @include desktopMin1200 {
+    padding-top: 40px;
+  }
+}
+// список перваг
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+  // 768
+  @include mobileMax768 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+// лішки
+.advantages__item {
+  max-width: 230px;
+  // 768
+  @include tabletMin768 {
+    max-width: 172px;
+  }
+
+  @include desktopMin1200 {
+    max-width: 288px;
+  }
+  // псевдо
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    // 768
+    @include tabletMin768 {
+      margin-bottom: 36px;
+    }
+    // від 1200
+    @include desktopMin1200 {
+      margin-bottom: 40px;
+    }
+  }
+}
+// заголовки під свг
+.advantages__title {
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  color: var(--button-border-hover-color);
+  margin-bottom: 19px;
+  // 768
+  @include tabletMin768 {
+    margin-bottom: 13px;
+
+    font-size: 48px;
+    line-height: 1.15;
+  }
+  // 1200
+  @include desktopMin1200 {
+    margin-bottom: 16px;
+    font-size: 58px;
+    line-height: 1.14;
+  }
+}
+// опис
+.advantages_subscribe {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.67;
+  margin: 0;
+  // 768
+  @include tabletMin768 {
+    font-size: 14px;
+    line-height: 1.74;
+  }
+  // 1200
+  @include desktopMin1200 {
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.02em;
+  }
+}
+// текст + цирфри
+.advantages__text,
+.advantages__title {
+  font-family: var(--font-stack);
+}
+// пререврнуті написи
+.advantages__text {
+  writing-mode: vertical-rl;
+
+  // до 768
+  @include mobileMax768 {
+    writing-mode: horizontal-tb;
+  }
+}

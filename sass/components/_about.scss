@@ -1,0 +1,185 @@
+.section-container {
+  background-color: var(--prime-color);
+  padding-bottom: 40px;
+  //min 768
+  @include tabletMin768 {
+    background-image: none;
+    padding-bottom: 60px;
+  }
+  // min1200
+  @include desktopMin1200 {
+    background-size: 1200px;
+    padding-bottom: 60px;
+  }
+}
+// підзаголовок
+.about-container__subtitle {
+  display: block;
+  font-family: var(--font-stack);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  color: var(--button-border-hover-color);
+  margin-bottom: 15px;
+  // min 768
+  @include tabletMin768 {
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  // min 1200
+  @include desktopMin1200 {
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+}
+.about-container__title {
+  font-family: var(--font-stack);
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 28px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.04em;
+  // min 768
+  @include tabletMin768 {
+    font-size: 48px;
+  }
+  // min 1200
+  @include desktopMin1200 {
+    font-size: 58px;
+    line-height: 1.13;
+    letter-spacing: 0.06;
+    margin-bottom: 32px;
+  }
+}
+// там де корова
+.about-container__circle {
+  margin-top: 32px;
+
+  @media (min-width: 768px) {
+    gap: 32px;
+    display: flex;
+    margin-top: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    gap: 99px;
+    margin-top: 60px;
+  }
+}
+
+.wrapper-img {
+  width: 280px;
+  height: 279px;
+
+  @media (min-width: 768px) {
+    width: 336px;
+    height: 335px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 501px;
+    height: 501px;
+  }
+}
+
+// дівчик для опису
+.about-container__wrapp {
+  margin-top: 40px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+// опис
+.about-describe {
+  max-width: 220px;
+
+  @media (min-width: 768px) {
+    max-width: 334px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 463px;
+  }
+}
+// текст опису
+.about-describe__text,
+.about-describe__text2 {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.about-container__wrapp {
+  font-size: 12px;
+  line-height: 1.62;
+  color: var(--black-color);
+  margin-bottom: 19px;
+  // 768
+  @media (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.76;
+  }
+  // від 1200
+  @media (min-width: 1200px) {
+    font-size: 16px;
+    letter-spacing: 0.04em;
+  }
+}
+// опис
+.about-describe__text2 {
+  font-size: 12px;
+  line-height: 1.62;
+  color: var(--grey-color);
+  margin-bottom: 0;
+  // від 768
+  @media (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+  }
+  // від 1200
+  @media (min-width: 1200px) {
+    line-height: 1.94;
+  }
+}
+// кнопочка
+.about-describe__button {
+  background: var(--button-color);
+  border-radius: 22px;
+  width: 176px;
+  height: 44px;
+  margin-top: 20px;
+  color: var(--button-text-color-hero);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.31;
+  @include transition(background-color);
+
+  @media (min-width: 768px) {
+    margin-top: 40px;
+  }
+}
+// ховерні фокуси
+.about-describe__button:hover,
+.about-describe__button:focus {
+  background-color: var(--button-border-hover-color);
+  cursor: pointer;
+}
+// фокусик
+.about-describe__button:focus {
+  fill: var(--burger-color);
+  color: var(--burger-color);
+}

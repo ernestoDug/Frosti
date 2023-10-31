@@ -1,0 +1,90 @@
+.modal {
+  background-color: var(--button-color);
+  min-height: auto;
+
+  @include mobileDescInterMax571 {
+    top: 0;
+    margin: 15px auto;
+    transform: translate(-50%, 0);
+  }
+}
+// форма
+.form-franchise {
+  width: 270px;
+  border-radius: 8px;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  // від 768
+  @include tabletMin768 {
+    width: 600px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    width: 700px;
+  }
+}
+// заголовок
+.form-franchise-title {
+  color: var(--button-border-hover-color);
+  font-weight: 700;
+}
+// поля
+.form-franchise__field {
+  margin: 16px 0 16px;
+}
+
+// інпути
+.form-franchise__input {
+  background: none;
+  width: 100%;
+  padding: 12px 3px;
+  border: 0;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  border-bottom: 2.5px solid var(--card-color-1);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+
+  // від 768
+  @include tabletMin768 {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    font-size: 16px;
+    line-height: 1.875;
+  }
+
+  &:focus {
+    border-bottom: 2px dashed var(--button-border-hover-color);
+  }
+}
+
+.franchise-form__wraperBtn {
+  display: flex;
+  justify-content: center;
+  background-color: var(--button-color);
+  margin-top: 10px;
+  border-radius: 24px;
+  //  768
+  @include mobileMax768 {
+    background-color: transparent;
+  }
+}
+// контакти фр
+.franchise-contacts {
+  padding: 0;
+  margin-top: 10px;
+  border-radius: 22px;
+  font-size: 12px;
+  text-align: center;
+  background-color: var(--button-color);
+}
+
+.franchise-contacts__link {
+  display: inline-block;
+  margin: 0 7px 0 15px;
+}

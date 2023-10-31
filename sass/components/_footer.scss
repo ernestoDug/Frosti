@@ -1,92 +1,180 @@
 .footer {
-  background-color: var(--prime-color);
-  padding-top: 60px;
+  background: var(--prime-color);
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
-
-.footer-container
-{
-  padding-left: 20px;
-  padding-right: 20px;
+// від 768
+.footer__container {
+  @include tabletMin768 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    margin-bottom: 60px;
+  }
 }
+// лого
+.footer__logo {
+  margin: 0;
 
-
-.footer-title
-{
-
-  font-weight: 700;
+  font-family: var(--font-stack);
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.16;
   text-transform: uppercase;
-  color: var(--hero-title-color);
-  margin-bottom: 16px;
-}
 
-.footer-title--big-text
-{  
-
-  font-size: 34px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.social-footer-wrapp
-{
   display: flex;
-  justify-content: flex-end;
-}
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 232px;
 
-.social-footer
-{
+  // 768 -1200
+  @include tablet768-1200 {
+    max-width: 340px;
+    height: 179px;
+    gap: 12px;
+  }
+  // від 768
+  @include tabletMin768 {
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+  }
+  // від 1200
+  @include desktopMin1200 {
+    max-width: 480px;
+    height: 116px;
+    font-size: 30px;
+  }
+}
+// контакти
+.contacts-wrapp {
   display: flex;
-  list-style: none;
-  gap: 20px;
+  flex-direction: column;
 }
 
-.social-footer__icon
-{
-  fill: var(--button-color);
-}
-
-.footer-contactx-wrapp
-{
+.footer__social-list {
   display: flex;
-  justify-content: flex-end;
-  position: relative;
-  padding-bottom: 40px;
+  gap: 28px;
+  justify-content: end;
+  // до 768
+  @include mobileMax768 {
+    margin: 40px 0;
+  }
+
+  // від 768
+  @include tabletMin768 {
+    gap: 30px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  // від 1200
+  @include desktopMin1200 {
+    margin-top: 12px;
+    margin-bottom: 40px;
+  }
+}
+// лішки
+.footer__social-item {
+  display: flex;
 }
 
-.footer-contactx-wrapp::after
-{
-  content: "";
-  border-bottom: 1px solid #E1E1E1;
-  width: 100vh;
-  position: absolute;
-  top: 60px;
-    left: -20px;
+.footer__social-link {
+  display: flex;
+  fill: var(--fonts-body-color);
+  &:hover > .footer__social-icon,
+  &:focus > .footer__social-icon {
+    fill: var(--button-border-hover-color);
+  }
 }
+// свг
+.footer__social-icon {
+  fill: var(--bg-icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  // до 768
+  @include mobileMax768 {
+    width: 32px;
+    height: 32px;
+  }
+}
+// контакти
+.footer__contacts {
+  display: flex;
 
-.footer__contact
-{
-
-  font-weight: 700;
+  font-weight: 500;
   font-size: 12px;
-  line-height: 1.9;
-  text-align: right;
+  line-height: 1.86;
+
+  // до 768
+  @include mobileMax768 {
+    margin-bottom: 40px;
+  }
+
+  // від 768
+  @include tabletMin768 {
+    font-size: 14px;
+  }
+
+  // від 1200
+  @include desktopMin1200 {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+}
+// текст біля конатктів .
+.footer__contacts-cover {
+  margin: 0;
+  padding-right: 4px;
+}
+// контактні посилання
+.footer__contacts-link {
+  @include mobileMax768 {
+    font-size: 12px;
+    font-style: normal;
+  }
+}
+// для усіх правв
+.footer__copyright-wrapp {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  padding-bottom: 3px;
+
+  // від 768
+  @include tabletMin768 {
+    padding: 8px 0;
+  }
+
+  // від 1200
+  @include desktopMin1200 {
+    padding-top: 7px;
+    padding-bottom: 4px;
+  }
+}
+// фрості
+.footer__copyright-title {
+  color: var(--span-color);
 }
 
-.footer__contact--color
-{
-  color: var(--hero-title-color);
-}
+// рік
+.footer__copyright-year {
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  color: var(--right-reserv-color);
 
-.footer__all-rights
-{
-font-weight: 700;
-font-size: 14px;
-line-height: 1.5;
-text-align: center;
-color: var(--right-reserv-color);
-padding-top: 20px;
-padding-bottom: 20px;
+  // до 768
+  @include mobileMax768 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // від 768
+  @include tabletMin768 {
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+  }
 }

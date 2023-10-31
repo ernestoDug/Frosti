@@ -1,35 +1,38 @@
-@import "./utils/vars.scss";
-@import "./utils/mixine.scss";
-@import "./components/base.scss";
-// heder
-@import "./components/header.scss";
-// section HERO
-@import "./components/hero.scss";
-// section PRODUCT
-@import "./components/section-products.scss";
-// section  About (how it’s made?)
-@import "./components/section-about.scss";
-//  section advantages
-@import "./components/section-advantages.scss";
-// Gallery
-@import "./components/section-gallery.scss";
-// section-Customer Reviews
-@import "./components/section-customer-reviews.scss";
-// section-contacts
-@import "./components/section-contacts.scss";
-// соцмережі футер
-@import "./components/footer.scss";
-// форма футера
-// @import "./components/footer-form.scss";
-// // бекдроп/модал
-// @import "./components/backdrop-modal.scss";
-// // модал-форм
-// @import "./components/modal-form.scss";
-// // фільтр
-// @import "./components/filtre.scss";
-// // портфоліо
-// @import "./components/potrfolio.scss";
-// ///burg
-// @import "./components/burger.scss";
+// Utils
+@import './utils/vars';
+@import './utils/mixin';
+// стілі прихвоаних заголовків 
+@import './utils/visually-hidden';
 
-@import "./components/magic.scss";
+// заагальні стилі 
+@import './allStyles/reset';
+@import './allStyles/universStyles'; 
+
+// хедер
+@import './components/header';
+// хероу
+@import './components/hero';
+// продукти
+@import './components/products';
+// про нас
+@import './components/about';
+// переваги
+@import './components/advantages';
+// галерея
+@import './components/gallery';
+// клієнти
+@import './components/customer-reviews';
+// контакти
+@import './components/contacts';
+// Footer
+@import './components/footer';
+// Mobile menu 
+@import './components/burger';
+// модалка придбати зараз 
+@import './components/modal-buyNow';
+// модалка  about
+@import './components/modalAbout';
+// модалка франшиза 
+@import './components/modalFranchise';
+// модалка локації 
+@import './components/modal-local';
